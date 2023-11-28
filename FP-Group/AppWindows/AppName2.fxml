@@ -32,6 +32,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -115,37 +116,38 @@
                   <Hyperlink alignment="BOTTOM_CENTER" onAction="#clickAsia" prefHeight="154.0" prefWidth="281.0" style="-fx-border-color: black;" text="Asia" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <ImageView id="africa" fx:id="africa" fitHeight="132.0" fitWidth="280.0" pickOnBounds="true">
                      <image>
-                        <Image url="@africa-map.gif" />
+                        <Image url="@../Continents/africa-map.gif" />
                      </image>
                   </ImageView>
                   <ImageView id="australia" fx:id="austrailla" fitHeight="135.0" fitWidth="282.0" pickOnBounds="true" GridPane.columnIndex="1">
                      <image>
-                        <Image url="@Australia.jpg" />
+                        <Image url="@../Continents/Australia.jpg" />
                      </image>
                   </ImageView>
                   <ImageView id="europe" fx:id="europe" fitHeight="133.0" fitWidth="280.0" pickOnBounds="true" GridPane.rowIndex="1">
                      <image>
-                        <Image url="@Europe_regions_minimal_cities.svg.png" />
+                        <Image url="@../Continents/Europe_regions_minimal_cities.svg.png" />
                      </image>
                   </ImageView>
                   <ImageView id="northAmerica" fx:id="northAmerica" fitHeight="131.0" fitWidth="281.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <image>
-                        <Image url="@north-america.jpg" />
+                        <Image url="@../Continents/north-america.jpg" />
                      </image>
                   </ImageView>
                   <ImageView id="southAmerica" fx:id="southAmerica" fitHeight="133.0" fitWidth="282.0" pickOnBounds="true" GridPane.rowIndex="2">
                      <image>
-                        <Image url="@south%20america.jpg" />
+                        <Image url="@../Continents/south%20america.jpg" />
                      </image>
                   </ImageView>
                   <ImageView fx:id="asia" fitHeight="134.0" fitWidth="282.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <image>
-                        <Image url="@Asia.jpg" />
+                        <Image url="@../Continents/Asia.jpg" />
                      </image></ImageView>
                </children>
             </GridPane>
             <ScrollBar id="scrollbar" layoutX="626.0" orientation="VERTICAL" prefHeight="483.0" prefWidth="14.0" />
       </children>
     </AnchorPane>
+      <Accordion />
   </children>
 </VBox>

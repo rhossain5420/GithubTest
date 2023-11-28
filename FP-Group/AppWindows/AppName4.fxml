@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TitledPane animated="false" text="untitled">
@@ -34,12 +33,12 @@
                      <children>
                         <ImageView fitHeight="213.0" fitWidth="251.0" pickOnBounds="true">
                            <image>
-                              <Image url="@Sush.jpg" />
+                              <Image url="@../Food/Sush.jpg" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="216.0" fitWidth="251.0" pickOnBounds="true" GridPane.columnIndex="1">
                            <image>
-                              <Image url="@b6b9680a32c84a9381a1ea5f5e529698.jpg" />
+                              <Image url="@../Food/b6b9680a32c84a9381a1ea5f5e529698.jpg" />
                            </image>
                         </ImageView>
                      </children>
