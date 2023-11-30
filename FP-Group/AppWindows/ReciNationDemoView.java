@@ -6,7 +6,7 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import java.lang.RuntimeException;
 
-public class RecipeAppHPDemoView extends Application{
+public class ReciNationDemoView extends Application{
 
 
    public static void main(String[] args){
@@ -17,9 +17,9 @@ public class RecipeAppHPDemoView extends Application{
    @Override
    public void start(Stage stage)throws Exception{ 
    
-      Parent root = FXMLLoader.load(getClass().getResource("RecipeApp.fxml"));
+      Parent root = FXMLLoader.load(getClass().getResource("ReciNation.fxml"));
       Scene scene = new Scene(root);
-      stage.setTitle("RECIPE");
+      stage.setTitle("ReciNation");
       stage.setScene(scene);
       stage.show();
    

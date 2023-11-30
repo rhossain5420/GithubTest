@@ -92,7 +92,7 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: brown;" VBox.vgrow="ALWAYS">
       <children>
-            <Label id="continentLabel" fx:id="Continents" alignment="CENTER" layoutX="17.0" layoutY="23.0" prefHeight="38.0" prefWidth="600.0" style="-fx-background-color: orange;" text="Continents">
+            <Label id="continentLabel" fx:id="Continents" alignment="CENTER" layoutX="17.0" layoutY="23.0" prefHeight="38.0" prefWidth="600.0" style="-fx-background-color: orange;" text="Pick your favorite U.S. dish">
                <font>
                   <Font name="Bauhaus 93" size="24.0" />
                </font>
