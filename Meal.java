@@ -1,59 +1,43 @@
+package CallRandomAPI;
 
-// import java.util.List;
-
-class Meal {
-    // @SerializedName("strMeal")
+public class Meal {
     private String strMeal;
-
-    // @SerializedName("strMealThumb")
-    private String strMealThumb;
-
-    // @SerializedName("idMeal")
-    private String idMeal;
+    private String strCategory;
+    private String strArea;
     
-// 
-//     public Meal(String strMeal, String strMealThumb, String idMeal) {
-//         this.strMeal = strMeal;
-//         this.strMealThumb = strMealThumb;
-//         this.idMeal = idMeal;
-//     }
-// 
-// 
-//     public String getStrMeal() {
-//         return strMeal;
-//     }
-// 
-// 
-//     public void setStrMeal(String strMeal) {
-//         this.strMeal = strMeal;
-//     }
-// 
-// 
-//     public String getStrMealThumb() {
-//         return strMealThumb;
-//     }
-// 
-// 
-//     public void setStrMealThumb(String strMealThumb) {
-//         this.strMealThumb = strMealThumb;
-//     }
-// 
-// 
-//     public String getIdMeal() {
-//         return idMeal;
-//     }
-// 
-// 
-//     public void setIdMeal(String idMeal) {
-//         this.idMeal = idMeal;
-//     }
-// 
-// 
-    @Override
+    public Meal(String strMeal, String strCategory, String strArea) {
+        this.strMeal = strMeal;
+        this.strCategory = strCategory;
+        this.strArea = strArea;
+    }
+
+    public String getStrMeal() {
+        return strMeal;
+    }
+
+    public void setStrMeal(String strMeal) {
+        this.strMeal = strMeal;
+    }
+
+    public String getStrCategory() {
+        return strCategory;
+    }
+
+    public void setStrCategory(String strCategory) {
+        this.strCategory = strCategory;
+    }
+
+    public String getStrArea() {
+        return strArea;
+    }
+
+    public void setStrArea(String strArea) {
+        this.strArea = strArea;
+    }
     public String toString() {
-        return "Meal" + "\n" +
-                "name = " + strMeal + "\n" +
-                "thumbnail = " + strMealThumb + "\n" +
-                "id = " + idMeal;
+        return 
+                "MealName = " + strMeal + "\n" +
+                "Type of Meal = " + strCategory + "\n" +
+                "Counrty of Meal = " + strArea;
     }
 }
