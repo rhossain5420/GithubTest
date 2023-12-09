@@ -27,7 +27,7 @@ public class ReciNationController {
 
     @FXML
     void generateRecipes(ActionEvent event) {
-
+    layout.getChildren().addAll(generateButton, mealLabel);
     }
 
 }
