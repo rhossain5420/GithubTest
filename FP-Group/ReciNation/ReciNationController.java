@@ -6,6 +6,8 @@ import java.net.http.HttpResponse;
 
 import com.google.gson.Gson;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -61,36 +63,41 @@ public class ReciNationController {
     
     private void fetchDataFromApi() {
         try {
-            // Replace "YOUR_API_ENDPOINT" with the actual API endpoint
-            String apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php";
+            String url = "https://www.themealdb.com/api/json/v1/1/random.php";
+      
 
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(apiUrl))
-                    .build();
+        // HttpRequest
+        HttpRequest request = HttpRequest.newBuilder().GET().uri(URI.create(url)).build();
 
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        // HttpClient
+        HttpClient client = HttpClient.newBuilder().build();
 
-            if (response.statusCode() == 200) {
-                // Process the JSON response
-                String jsonString = response.body();
-                Gson gson = new Gson();
-                MealsResponse MealsResponse = gson.fromJson(jsonString, MealsResponse.class);
-                System.out.println("Random Meal \n" + MealsResponse.getMeals().toString());
+        // HttpResponse
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        System.out.println("Response: " + response.statusCode());
+
+        if (response.statusCode() == 200) {
+            // Process the JSON response
+            String jsonString = response.body();
+            Gson gson = new Gson();
+            MealsResponse mealsResponse = gson.fromJson(jsonString, MealsResponse.class);
+            meals = mealsResponse.getMeals().get(0);
                 // Display data in your UI components
-                displayData();
+                 displayData();
             } else {
                 textBox.setText("Failed to fetch data from the API");
             }
         } catch (Exception e) {
-            e.printStackTrace();
-            textBox.setText("Meal : Briany \n country: India ");
+            // e.printStackTrace();
+            // textBox.setText("Meal : Briany \n country: India ");
         }
     }
 
-    private void displayData() {
-        // Update your UI components with data from the 'meal' object
-        textBox.setText(meals.strArea.toString());
-    }
+     private void displayData() {
+   
+         textBox.setText(meals.toString());
+     }
 }
 
 
