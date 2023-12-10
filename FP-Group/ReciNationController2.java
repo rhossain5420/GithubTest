@@ -1,4 +1,3 @@
-
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -15,7 +14,7 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
-public class ReciNationController {
+public class ReciNationController2 {
 
     @FXML
     private Label Instructions;
@@ -43,22 +42,21 @@ public class ReciNationController {
 
     @FXML
     private Hyperlink youTube;
-    private HttpClient client;
-    private Meal meals;
 
+    private HttpClient client = HttpClient.newHttpClient(); // Initialize the client
+    private Meal meals;
 
     @FXML
     protected void clickVideo(ActionEvent event) {
-
+        // Add logic for handling video click
     }
 
-    
     @FXML
     protected void generateRecipes(ActionEvent event) {
         // Call the API and display data
         fetchDataFromApi();
     }
-    
+
     private void fetchDataFromApi() {
         try {
             // Replace "YOUR_API_ENDPOINT" with the actual API endpoint
@@ -74,24 +72,21 @@ public class ReciNationController {
                 // Process the JSON response
                 String jsonString = response.body();
                 Gson gson = new Gson();
-                MealsResponse MealsResponse = gson.fromJson(jsonString, MealsResponse.class);
-                System.out.println("Random Meal \n" + MealsResponse.getMeals().toString());
+                MealsResponse mealsResponse = gson.fromJson(jsonString, MealsResponse.class);
+                System.out.println("Random Meal \n" + mealsResponse.getMeals().toString());
                 // Display data in your UI components
-                displayData();
+                displayData(mealsResponse.getMeals().get(0));
             } else {
                 textBox.setText("Failed to fetch data from the API");
             }
         } catch (Exception e) {
             e.printStackTrace();
-            textBox.setText("Meal : Briany \n country: India ");
+            textBox.setText("An error occurred: " + e.getMessage());
         }
     }
 
-    private void displayData() {
+    private void displayData(Meal meal) {
         // Update your UI components with data from the 'meal' object
         textBox.setText(meals.strArea.toString());
     }
 }
-
-
-
