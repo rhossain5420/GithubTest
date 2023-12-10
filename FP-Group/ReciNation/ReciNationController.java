@@ -1,5 +1,7 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
 import javafx.scene.image.ImageView;
@@ -23,11 +25,25 @@ public class ReciNationController {
     private ImageView foodImage;
 
     @FXML
+    private Button generateButton;
+
+    @FXML
     private AnchorPane secondBackground;
 
     @FXML
+    private Label textBox;
+
+    @FXML
+    private Hyperlink youTube;
+
+    @FXML
+    void clickVideo(ActionEvent event) {
+
+    }
+
+    @FXML
     void generateRecipes(ActionEvent event) {
-    layout.getChildren().addAll(generateButton, mealLabel);
+
     }
 
 }
