@@ -14,10 +14,6 @@ import java.net.http.HttpResponse;
 
 import com.google.gson.Gson;
 
-
-
-
-
 public class RandomMealApp extends Application {
 
     private Label mealLabel;
@@ -43,7 +39,6 @@ public class RandomMealApp extends Application {
         primaryStage.setScene(scene);
 
         primaryStage.show();
-        
     }
 
     private void generateRandomMeal() {
