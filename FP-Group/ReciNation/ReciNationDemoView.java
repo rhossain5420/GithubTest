@@ -27,6 +27,10 @@ public class ReciNationDemoView extends Application{
      
    
    } 
-   
+   @Override
+   public void stop() {
+      System.out.println("Application Class Stoped!");
+   }
+
    
 }

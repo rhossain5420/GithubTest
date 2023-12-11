@@ -1,9 +1,11 @@
-
+//mport javafx.scene.image.Image;
 
 public class Meal {
     public String strMeal;
     public String strCategory;
     public String strArea;
+    public String strMealThumb;
+    public String strYoutube;
     public String strIngredient1;
     public String strIngredient2;
     public String strIngredient3;
@@ -25,6 +27,7 @@ public class Meal {
     public String strIngredient19;
     public String strIngredient20;
     
+
    //  public Meal(String strMeal, String strCategory, String strArea) {
 //         this.strMeal = strMeal;
 //         this.strCategory = strCategory;
@@ -56,29 +59,31 @@ public class Meal {
 //     }
     public String toString() {
         return 
-                "MealName = " + strMeal + "\n" +
-                "Type of Meal = " + strCategory + "\n" +
-                "Counrty of Meal = " + strArea + "\n" +
-                "Ingredient 1: = " + strIngredient1 + "\n" +
-                "Ingredient 2: = " + strIngredient2 + "\n" +
-                "Ingredient 3: = " + strIngredient3 + "\n" +
-                "Ingredient 4: = " + strIngredient4 + "\n" +
-                "Ingredient 5: = " + strIngredient5 + "\n" +
-                "Ingredient 6: = " + strIngredient6 + "\n" +
-                "Ingredient 7: = " + strIngredient7 + "\n" +
-                "Ingredient 8: = " + strIngredient8 + "\n" +
-                "Ingredient 9: = " + strIngredient9 + "\n" +
-                "Ingredient 10: = " + strIngredient10 + "\n" +
-                "Ingredient 11: = " + strIngredient11 + "\n" +
-                "Ingredient 12: = " + strIngredient12 + "\n" +
-                "Ingredient 13: = " + strIngredient13 + "\n" +
-                "Ingredient 14: = " + strIngredient14 + "\n" +
-                "Ingredient 15: = " + strIngredient15 + "\n" +
-                "Ingredient 16: = " + strIngredient16 + "\n" +
-                "Ingredient 17: = " + strIngredient17 + "\n" +
-                "Ingredient 18: = " + strIngredient18 + "\n" +
-                "Ingredient 19: = " + strIngredient19 + "\n" +
-                "Ingredient 20: = " + strIngredient20;
-    }
+        strYoutube +
+        strMealThumb +
+        String.format("%-20s%-20s%-20s\n", "Country Name", "Meal Name", "Ingredients") +
+        String.format("%-20s%-20s%-20s\n", strArea, strCategory, strMeal) +
+        "-------------------------------------------\n" +
+        String.format("%-20s%-20s\n", "Ingredient 1:", strIngredient1) +
+        String.format("%-20s%-20s\n", "Ingredient 2:", strIngredient2) +
+        String.format("%-20s%-20s\n", "Ingredient 3:", strIngredient3) +
+        String.format("%-20s%-20s\n", "Ingredient 4:", strIngredient4) +
+        String.format("%-20s%-20s\n", "Ingredient 5:", strIngredient5) +
+        String.format("%-20s%-20s\n", "Ingredient 6:", strIngredient6) +
+        String.format("%-20s%-20s\n", "Ingredient 7:", strIngredient7) +
+        String.format("%-20s%-20s\n", "Ingredient 8:", strIngredient8) +
+        String.format("%-20s%-20s\n", "Ingredient 9:", strIngredient9) +
+        String.format("%-20s%-20s\n", "Ingredient 10:", strIngredient10) +
+        String.format("%-20s%-20s\n", "Ingredient 11:", strIngredient11) +
+        String.format("%-20s%-20s\n", "Ingredient 12:", strIngredient12) +
+        String.format("%-20s%-20s\n", "Ingredient 13:", strIngredient13) +
+        String.format("%-20s%-20s\n", "Ingredient 14:", strIngredient14) +
+        String.format("%-20s%-20s\n", "Ingredient 15:", strIngredient15) +
+        String.format("%-20s%-20s\n", "Ingredient 16:", strIngredient16) +
+        String.format("%-20s%-20s\n", "Ingredient 17:", strIngredient17) +
+        String.format("%-20s%-20s\n", "Ingredient 18:", strIngredient18) +
+        String.format("%-20s%-20s\n", "Ingredient 19:", strIngredient19) +
+        String.format("%-20s%-20s\n", "Ingredient 20:", strIngredient20);
+}
     
 }
