@@ -1,3 +1,4 @@
+import com.google.gson.Gson;
 
 
 import java.io.IOException;
@@ -6,7 +7,6 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-import com.google.gson.Gson;
 
 public class RandomAPICall {
     public static void main(String[] args) throws IOException, InterruptedException {
